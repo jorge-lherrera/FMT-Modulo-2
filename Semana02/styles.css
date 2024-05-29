@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: aqua;
+  font-size: 8rem;
+}
+
+p {
+  color: yellowgreen;
+  font-size: 4rem;
+}
+ul {
+  color: rebeccapurple;
+  font-size: 2rem;
+  margin: 32px;
+}
