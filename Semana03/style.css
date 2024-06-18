@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.container {
+  background-color: #f0eeee;
+  margin: 1.5rem;
+  height: 90vh;
+  border-radius: 1%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header h1 {
+  font-size: 6rem;
+  letter-spacing: 0.75px;
+  margin-top: 2rem;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+  font-size: 4rem;
+  line-height: 3rem;
+}
+.main h2 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.aside,
+.summary {
+  width: 30rem;
+  height: 30rem;
+}
