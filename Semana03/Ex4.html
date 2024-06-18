@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      #to-do-list-container {
+        width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      #to-do-list-container h2 {
+        margin: 0 0 20px;
+      }
+      #task-input {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #add-task-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #add-task-btn:hover {
+        background-color: #0056b3;
+      }
+      #task-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .task-item {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .task-item.done {
+        text-decoration: line-through;
+        background-color: #d4edda;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="to-do-list-container">
+      <h2>Lista de Tarefas</h2>
+      <input type="text" id="task-input" placeholder="Adicionar nova tarefa" />
+      <button id="add-task-btn">Adicionar Tarefa</button>
+      <ul id="task-list"></ul>
+    </div>
+    <script src="Ex4.js"></script>
+  </body>
+</html>
