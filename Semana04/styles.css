@@ -138,6 +138,10 @@ a {
   margin: 3rem;
 }
 
+#left_arrow {
+  background-color: black;
+}
+
 .footer {
   width: 27rem;
   height: 17rem;
