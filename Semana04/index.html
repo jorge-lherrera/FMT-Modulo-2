@@ -3,44 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <header>
-        <ul class="header">
-          <li>Sobre</li>
-          <li>Trailer</li>
-          <img src="./Public/netflix_logo.png" alt="netflix_logo" />
-          <li>Atores</li>
-          <li>Avaliações</li>
-        </ul>
+      <header class="header">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a
+                aria-label="sobre"
+                href="https://pt.wikipedia.org/wiki/Supernatural_(s%C3%A9rie_de_televis%C3%A3o)"
+                target="_blank"
+                onmouseover="highlight(this)"
+                onmouseout="unhighlight(this)"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                aria-label="trailer"
+                href="https://www.youtube.com/watch?v=fdTZBxkiNsY"
+                target="_blank"
+                onmouseover="highlight(this)"
+                onmouseout="unhighlight(this)"
+                >Trailer</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://netflix.com"
+                target="_blank"
+                onmouseover="highlight(this)"
+                onmouseout="unhighlight(this)"
+                ><img src="./Public/netflix_logo.png" alt="logo netflix"
+              /></a>
+            </li>
+            <li>
+              <a
+                aria-label="atores"
+                href="https://pt.wikipedia.org/wiki/Supernatural_(s%C3%A9rie_de_televis%C3%A3o)"
+                target="_blank"
+                onmouseover="highlight(this)"
+                onmouseout="unhighlight(this)"
+                >Atores</a
+              >
+            </li>
+            <li>
+              <a
+                aria-label="avaliações"
+                href="https://pt.wikipedia.org/wiki/Supernatural_(s%C3%A9rie_de_televis%C3%A3o)"
+                target="_blank"
+                onmouseover="highlight(this)"
+                onmouseout="unhighlight(this)"
+                >Avaliações</a
+              >
+            </li>
+          </ul>
+        </nav>
       </header>
-      <aside class="aside">
-        <h1>Supernatural</h1>
-        <h4>Drama, Misterio, Terror</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quis
-          vero repudiandae dolorem saepe similique ratione fuga odit magni
-          veniam autem dolor, optio earum magnam eum, illum consequatur ipsam
-          vitae?
-        </p>
-        <div class="season">
-          <span>1ra Temporada</span>
-          <button class="btn_left"></button>
-          <button class="btn_right"></button>
-        </div>
-        <div>img</div>
-        <div>img</div>
-        <div>img</div>
-      </aside>
       <main class="main">
-        <img
-          src="./Public/e58b119fec1b0779c17568cc5fb3e49b.png"
-          alt="Supernatural Poster"
-        />
+        <aside class="aside">
+          <summary class="summary">
+            <h4 class="title">Supernatural</h4>
+            <h6 class="category">Drama, Mistério, Terror</h6>
+            <p class="resume">
+              Série de TV americana que segue os irmãos Sam e Dean Winchester
+              enquanto caçam criaturas sobrenaturais, como demônios e fantasmas.
+              Viajando pelos EUA em um Chevy Impala 1967, eles enfrentam
+              diversos fenômenos paranormais. Criada por Eric Kripke, a série
+              mistura horror, drama e humor. Estreou em 2005 e teve 15
+              temporadas, concluindo em 2020.
+            </p>
+          </summary>
+          <section class="section">
+            <div class="description">
+              <p>1ª Temporada</p>
+              <div class="arrows_container">
+                <svg
+                  onmouseover="highlight(this)"
+                  onmouseout="unhighlight(this)"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="arrows"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5 8.25 12l7.5-7.5"
+                  />
+                </svg>
+                <svg
+                  onmouseover="highlight(this)"
+                  onmouseout="unhighlight(this)"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="arrows"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="chapters">
+              <div class="chapters_container">
+                <img src="./Public/Ep1.jpg" alt="episodio 1 Supernatural" />
+              </div>
+              <div>
+                <img src="./Public/Ep2.jpg" alt="episodio 2 Supernatural" />
+              </div>
+              <div>
+                <img src="./Public/Ep3.jpg" alt="episodio 3 Supernatural" />
+              </div>
+            </div>
+          </section>
+        </aside>
+        <div class="poster">
+          <img
+            class="poster"
+            src="./Public/e58b119fec1b0779c17568cc5fb3e49b.png"
+            alt="poster-supernatural"
+          />
+        </div>
+        <div class="social_network">
+          <a
+            aria-label="instagram"
+            href="https://instagram.com/"
+            target="_blank"
+            onmouseover="highlight(this)"
+            onmouseout="unhighlight(this)"
+            ><img src="./Public/instagram.png" alt="logo instagram"
+          /></a>
+          <a
+            aria-label="facebook"
+            href="https://facebook.com/"
+            target="_blank"
+            onmouseover="highlight(this)"
+            onmouseout="unhighlight(this)"
+            ><img src="./Public/facebook.png" alt="logo facebook"
+          /></a>
+          <a
+            aria-label="acessar x"
+            href="https://x.com/"
+            target="_blank"
+            onmouseover="highlight(this)"
+            onmouseout="unhighlight(this)"
+            ><img src="./Public/twitter.png" alt="logo da rede social x"
+          /></a>
+        </div>
       </main>
+      <footer class="footer">
+        <p>2005 | 1 Temporada | IMDB 9.5</p>
+      </footer>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
