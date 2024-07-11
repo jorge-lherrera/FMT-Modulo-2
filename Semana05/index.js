@@ -4,10 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const interestInput = document.querySelector(".form input");
   const clearButton = document.querySelector(".button-clear");
   const newsTitleElement = document.querySelector(".title-news-today");
+  const newsElement = document.querySelector(".news");
+
+  let currentNewsIndex = 0;
+  let newsData = [];
 
   function loadInterests() {
     const interests = JSON.parse(localStorage.getItem("meus-interesses")) || [];
-
     interestsList.innerHTML = "";
 
     interests.forEach((interest) => {
@@ -46,9 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       const data = await response.json();
       if (data.items && data.items.length > 0) {
-        const firstNews = data.items[0];
-        console.log(data);
-        newsTitleElement.textContent = firstNews.titulo;
+        newsData = data.items;
+        showNews(currentNewsIndex); // Show the first news item
       } else {
         newsTitleElement.textContent = "Nenhuma notícia encontrada";
       }
@@ -58,10 +60,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function showNews(index) {
+    if (newsData.length > 0) {
+      newsTitleElement.textContent = newsData[index].titulo;
+    }
+  }
+
+  function showNextNews() {
+    currentNewsIndex = (currentNewsIndex + 1) % newsData.length;
+    showNews(currentNewsIndex);
+  }
+
   addButton.addEventListener("click", addInterest);
   clearButton.addEventListener("click", clearInterests);
+  newsElement.addEventListener("click", showNextNews);
 
   setInterval(loadInterests, 1000);
-
   loadNews();
 });
