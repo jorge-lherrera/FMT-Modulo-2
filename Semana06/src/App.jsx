@@ -1,15 +1,9 @@
-import Article from "./components/Article";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="my my-auto max-w-[120rem] py-[2rem]">
-      <Header />
-      <Main />
-      <Article />
-      <Footer />
+    <div>
+      <Home />
     </div>
   );
 }
