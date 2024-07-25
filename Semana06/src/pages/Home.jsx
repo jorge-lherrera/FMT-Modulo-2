@@ -6,16 +6,10 @@ import Header from "../components/Header";
 function Home() {
   return (
     <>
-      <div className="bg-black">
-        <Header />
-      </div>
-      <div className="bg-[#111111]">
-        <Main />
-      </div>
+      <Header />
+      <Main />
       <Article />
-      <div className="bg-black">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }
